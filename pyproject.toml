@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lan-share"
+version = "0.1.0"
+description = "LAN file sharing tool with async TCP/UDP"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+lshare = "lan_share.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["lan_share*"]
